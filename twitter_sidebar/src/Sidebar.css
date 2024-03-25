@@ -22,7 +22,7 @@
   margin-bottom: 5px;
 }
 #moreLinks .MuiSvgIcon-root {
-  margin-right: 20px;
+  padding: 20px;
 }
 #moreLinks:hover {
   background-color: hsl(205, 92%, 95%);
