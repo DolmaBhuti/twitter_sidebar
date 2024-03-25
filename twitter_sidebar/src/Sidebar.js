@@ -42,12 +42,12 @@ function Sidebar() {
     { link: "Display", icon: <BrushOutlinedIcon /> },
     { link: "Keyboard shortcuts", icon: <AccessibilityNewOutlinedIcon /> },
   ];
+
   const [open, setOpen] = useState(false);
 
   const handleClick = (event) => {
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };
@@ -60,21 +60,18 @@ function Sidebar() {
       <SidebarLink text="Bookmarks" Icon={BookmarkBorderIcon} />
       <SidebarLink text="Lists" Icon={ListAltIcon} />
       <SidebarLink text="Profile" Icon={PermIdentityIcon} />
-      {/* menu button that sets the open state to true and shows the menu */}
       <Button onClick={handleClick} id="moreLinks">
         <MoreHorizIcon /> More
       </Button>
-      {/* tweet  button for adding tweets to the sidebar */}
       <Button id="tweet">Tweet</Button>
-      {/* menu items that will show when the More button is clicked.  State will be false when mouse is clicked outisde the menu*/}
-      <Menu id="long-menu" open={open} onClose={handleClose}>
+
+      <Menu open={open} onClose={handleClose} id="long-menu">
         {options.map((option) => (
           <MenuItem key={option.link} onClick={handleClose}>
             {option.icon} {option.link}
           </MenuItem>
         ))}
-      </Menu>{" "}
-      {/**onClick event handler: open prop, onClose prop*/}
+      </Menu>
     </div>
   );
 }

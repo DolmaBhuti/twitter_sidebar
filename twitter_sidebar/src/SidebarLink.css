@@ -3,7 +3,6 @@
   align-items: cover;
   cursor: pointer;
   border-radius: 30px;
-  padding-left: 12px;
 }
 .link:hover {
   background-color: #e8f5fe;
